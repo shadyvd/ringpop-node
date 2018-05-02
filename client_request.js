@@ -124,7 +124,7 @@ ClientRequest.prototype.send = function send() {
                 self.strBody = JSON.stringify(arg3);
                 subChannel.request({
                     host: opts.host,
-                    serviceName: 'ringpop',
+                    serviceName: subChannel.serviceName || 'ringpop',
                     hasNoParent: true,
                     retryLimit: opts.retryLimit || 0,
                     trace: false,
